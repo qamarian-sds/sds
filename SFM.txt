@@ -5,22 +5,35 @@ available for all major operating systems. Just download an appropriate binary a
 
 Displaying Contents of A Structured Directory (Sirectory)
 
-	NOTES
+SFM allows display of directory contents in an horizontal manner, as well as a vertical a manner.
+
+	Horizontal Manner
+		a.txt b.txt c.txt d.txt
+		e.txt f.txt g.txt h.txt
+
+	Vertical Manner
+		a.txt c.txt e.txt g.txt
+		b.txt d.txt f.txt h.txt
+
+SFM also allows the display of a dir-content's type; D for dir and F for file. E.g.:
+	httpd (D), log (F)
+
+Notes
 	PWD would mean user's present working directory.
 	Hidden file would mean file starting with ".".
 
-	sfm x // Displaying contents of pwd, in horizontal manner
-	sfm y // Displaying contents of pwd, in vertical manner
-	sfm xa // Contents of pwd (including hidden files), in horizontal manner
-	sfm ya // Contents of pwd (including hidden files), in vertical manner
+Syntax
+	sfm {Valid Unix filepath or ignore if pwd} {Chain of additional commands}
 
-	sfm {Valid unix file-path} x // Directory which isn't pwd, in horizontal manner
-	sfm {Valid unix file-path} y // Directory which isn't pwd, in vertical manner
-
-	sfm {Valid unix file-path} xa // Directory which isn't pwd (including hidden files), in
-		horizontal manner
-	sfm {Valid unix file-path} ya // Directory which isn't pwd (including hidden files), in
-		vertical manner
+Examples
+	sfm x // Horizontal display of pwd
+	sfm y // Vertical display of pwd
+	sfm xt // Horizontal display of pwd, with content type displayed
+	sfm yt // Vertical display of pwd, with content type displayed
+	sfm someDir x // Horizontal display of a dir not the pwd
+	sfm someDir y // Vertical display of a dir not the pwd
+	sfm someDir xt // Horizontal display of a dir not the pwd, with content type displayed
+	sfm someDir yt // Vertical display of a dir not the pwd, with content type displayed
 
 Creating New Files and Subdees
 
@@ -63,18 +76,6 @@ working directory. Files and subdees can be moved to:
 		File/Subdee
 	sfm mv {File name or subdee name} b {Other file} // Moving to The Back of Another
 		File/Subdee
-
-	sfm mv {File name or subdee name} -2 /* Moving n Steps to The Left of Current Position
-		Assuming we have files:
-			a.txt, b.txt, c.txt, d.txt
-		Running the command above (for "d.txt") would rearrange the dir into:
-			a.txt, d.txt, b.txt, c.txt */
-
-	sfm mv {File name or subdee name} +2 /* Moving n Steps to The Right of Current Position
-		Assuming we have files:
-			a.txt, b.txt, c.txt, d.txt
-		Running the command above (for "a.txt") would rearrange the dir into:
-			b.txt, c.txt, a.txt, d.txt */
 
 Directory Segregation
 
@@ -121,6 +122,3 @@ SFM Help
 Shortcuts
 
 Note: Shortcuts can change with version.
-
-sfm x  | sfm
-sfm xa | sfm a
