@@ -100,6 +100,12 @@ Desegregating a Segregated Dir
 
 	sfm ds
 
+Moving Files and Subdees (Revisited)
+
+If command "sfm mv {File name} a" or "sfm mv {File name} z" is performed for a file in a structured,
+dir the file would be placed at the beginning of the files section, not necessarily the beginning of
+the dir. The same goes for subdees.
+
 Getting An SDS Dir's Basic Info
 
 How can you know if an SDS directory is segregated? How can you know what ordering an SDS dir in
@@ -118,12 +124,3 @@ Note: Shortcuts can change with version.
 
 sfm x  | sfm
 sfm xa | sfm a
-
-sfm od ascter | sfm od asc
-sfm od desbef | sfm od des
-
-sfm do ascter | sfm do asc
-sfm do desbef | sfm do des
-
-sfm fo ascter | sfm fo asc
-sfm fo desbef | sfm fo des
