@@ -1,0 +1,182 @@
+SDS File Manager (SFM)
+
+The SDS File Manager (SFM) is a CLI file manager for structured directories (sirectories). It is
+available for all major operating systems. Just download an appropriate binary and start using.
+
+Displaying Contents of A Sirectory (Structured Directory)
+
+	NOTES
+		PWD would mean user's present working directory.
+		Hidden file would mean file starting with ".".
+
+	sfm x // Displaying contents of pwd, in horizontal manner
+	sfm y // Displaying contents of pwd, in vertical manner
+	sfm xa // Contents of pwd (including hidden files), in horizontal manner
+	sfm ya // Contents of pwd (including hidden files), in vertical manner
+
+	sfm {Valid unix file-path} x // Directory which isn't pwd, in horizontal manner
+	sfm {Valid unix file-path} y // Directory which isn't pwd, in vertical manner
+
+	sfm {Valid unix file-path} xa // Directory which isn't pwd (including hidden files), in
+		horizontal manner
+	sfm {Valid unix file-path} ya // Directory which isn't pwd (including hidden files), in
+		vertical manner
+
+Creating New Files and Subdees
+
+SFM allows you to create new files and (sub-directories) subdees at:
+
+	- the beginning of the dir;
+	- the end of the dir;
+	- the front of another file/subdee;
+	- the back of another file/subdee
+
+	sfm nf {file name} a // Creating file at the beginning of the dir
+	sfm nf {file name} z // Creating file at the end of the dir
+	sfm nf new.txt f old.txt // Creating file in front of another file/subdee
+	sfm nf new.txt b old.txt // Creating file at the back of another file/subdee
+	sfm nf {file name} // Creating file without bothering about position
+
+	sfm nd {subdee name} a // Creating subdee at the beginning of the dir
+	sfm nd {subdee name} z // Creating subdee at the end of the dir
+	sfm nd newDir f oldDir // Creating subdee in front of another file/subdee
+	sfm nd newDir b oldDir // Creating subdee at the back of another file/subdee
+	sfm nd {subdee name} // Creating subdee without bothering about position
+
+Moving Files and Subdees
+
+SFM allows you to move files and subdees about. Movements can only be performed within the present
+working directory. File and subdees can be moved to:
+
+	- the beginning of the dir;
+	- the end of the dir;
+	- the front of another file/subdee;
+	- the back of another file/subdee;
+	- n steps to the left of current position;
+	- n steps to the right of current position
+
+	sfm mv {file or dir name} a // Moving to The Beginning of The Dir
+	sfm mv {file or dir name} z // Moving to The End of The Dir
+	sfm mv b.txt f a.txt // Moving to The Front of Another File/Subdee
+	sfm mv a.txt b c.txt // Moving to The Back of Another File/Subdee
+
+	sfm mv d.txt -2 /* Moving n Steps to The Left of Current Position
+		Assuming we have files:
+			a.txt, b.txt, c.txt, d.txt
+		Running the command above would rearrange our dir into:
+			a.txt, d.txt, b.txt, c.txt */
+
+	sfm mv a.txt +2 /* Moving n Steps to The Right of Current Position
+		Assuming we have files:
+			a.txt, b.txt, c.txt, d.txt
+		Running the command above would rearrange our dir into:
+			b.txt, c.txt, a.txt, d.txt */
+
+Ordering Files and Subdees
+
+SFM allows you to sort the contents of a directory. However, unlike traditional file managers which
+support only sorting in ascending and descending order, SFM supports some other types of sorting.
+SFM supports six types of sorting:
+
+	ASCBEF (Pronounced as ass-beef): (Ascending-order, with numbers before alphabets)
+		E.g.: 01, 2, 3, a, B, c, d
+	ASCTER (Pronounced as ass-ter):  (Ascending-order, with numbers after alphabets)
+		E.g.: A, B, c, D, 0, 2, 03
+	ASCCOD (Provounced as ass-code): (Ascending-order, with whole sorting based on unicode
+		codepoint)
+		E.g.: 0, 02, 0a, 1, Ea, bd
+	DESBEF (Pronounced as des-beef): (Descending-order, with numbers before alphabets)
+		E.g.: 03, 2, 1, D, c, B, a
+	DESTER (Pronounced as des-ter):  (Descending-order, with numbers after alphabets)
+		E.g.: d, c, B, a, 3, 03, 1
+	DESCOD (Pronounced as des-code): (Descending-order, with whole sorting based on unicode
+		codepoint)
+		E.g.: bd, Ea, 1, 0a, 02, 0
+
+Note: In ASCBEF, ASCTER, DESBEF, and DESTER, alphanumeric characters would take precedence over
+other characters.
+
+	E.g.: a, b, 1, 4, .gitattribute, -someFile
+
+Before explaining how to sort a dir, using SFM, let's play around some other things first.
+
+Directory Segregation
+
+In traditional file managers, files and directories are often segregated. That is, the subdees are
+listed before or after listing the files in the dir.
+
+	E.g.: a (file), d (file), f (file), B (dir), C (dir), Z (dir)
+	E.g.: E (dir), S (dir), W (dir), r (file), t (file), y (file)
+
+SFM however allows files and directories to mix freely. For example, the examples above can
+respectively be the following:
+
+	E.g.: a (file), B (dir), C (dir), d (file), f (file), Z (dir)
+	E.g.: E (dir), r (file), S (dir), t (file), W (dir), y (file)
+
+Assuming your files and subdees in your dir are mixed, the following command can be used to
+segregate them:
+
+	sfm sg da // Directories would be listed after files.
+	sfm sg db // Directories would be listed before files
+
+Desegregating a Segregated Dir
+
+	sfm ds
+
+Getting An SDS Dir's Basic Info
+
+How can you know if an SDS directory is segregated? How can you know what ordering an SDS dir in
+under? How can you learn some basic info about an SDS dir? Well, by issuing the command:
+
+	sfm di
+
+Ordering Files and Subdees (Revisited)
+
+If an SDS dir is unsegregated, the following commands can be used:
+
+	sfm od ascbef // For ASCBEF ordering
+	sfm od ascter // For ASCTER ordering
+	sfm od asccod // For ASCCOD ordering
+	sfm od desbef // For DESBEF ordering
+	sfm od dester // For DESTER ordering
+	sfm od descod // For DESCOD ordering
+
+To order the subdees of a segregated dir:
+
+	sfm do ascbef // For ASCBEF ordering
+	sfm do ascter // For ASCTER ordering
+	sfm do asccod // For ASCCOD ordering
+	sfm do desbef // For DESBEF ordering
+	sfm do dester // For DESTER ordering
+	sfm do descod // For DESCOD ordering
+
+To order the files of a segregated dir:
+
+	sfm fo ascbef // For ASCBEF ordering
+	sfm fo ascter // For ASCTER ordering
+	sfm fo asccod // For ASCCOD ordering
+	sfm fo desbef // For DESBEF ordering
+	sfm fo dester // For DESTER ordering
+	sfm fo descod // For DESCOD ordering
+
+SFM Help
+
+	sfm hp inf // To get some info about the SFM
+	sfm hp doc // To get usage document
+
+Shortcuts
+
+Note: Shortcuts can change with version.
+
+sfm x  | sfm
+sfm xa | sfm a
+
+sfm od ascter | sfm od asc
+sfm od desbef | sfm od des
+
+sfm do ascter | sfm do asc
+sfm do desbef | sfm do des
+
+sfm fo ascter | sfm fo asc
+sfm fo desbef | sfm fo des
