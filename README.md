@@ -1,3 +1,5 @@
+# Structured Directory Solution (SDS)
+
 Structured Directory Solution (SDS) gives a directory a structure. Assume you're working on a project.
 And the project is given a directory. And this directory contains files:
 
@@ -27,6 +29,6 @@ README.txt, intro.txt, a.txt, d.txt, v.txt
 [This is clearly a more intuitive organization of the directory.]
 ```
 
-__SDS allows you to organize your directories in anyway. And it is platform independent, meaning your
+SDS allows you to organize your directories in anyway. And it is platform independent, meaning your
 directories can maintain their organization, as you copy them from one computer to another. SDS is
-an open standard for organizing directories.__
+an open standard for organizing directories.
