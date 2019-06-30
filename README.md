@@ -29,6 +29,6 @@ README.txt, intro.txt, a.txt, d.txt, v.txt
 [This is clearly a more intuitive organization of the directory.]
 ```
 
-SDS allows you to organize your directories in anyway. And it is platform independent, meaning your
-directories can maintain their organization, as you copy them from one computer to another. SDS is
-an open standard for organizing directories.
+SDS allows you to organize your directories in anyway. And it is platform independent, meaning  your
+directory can maintain its organization, as you copy it from one computer to another. SDS is an open
+standard for organizing directories.
