@@ -1,7 +1,13 @@
 SDS File Manager (SFM)
 
 The SDS File Manager (SFM) is a CLI file manager for structured directories (sirectories). It is
-available for all major operating systems. Just download an appropriate binary and start using.
+available for all major platforms. Just download an appropriate binary and start using.
+
+Notes
+	"Dir" would mean directory.
+	"PWD" would mean user's present working directory.
+	"Subdee" would mean sub-directory.
+	"Hidden file" would mean file starting with ".".
 
 Displaying Contents of A Structured Directory (Sirectory)
 
@@ -15,15 +21,14 @@ SFM allows display of directory contents in an horizontal manner, as well as a v
 		a.txt c.txt e.txt g.txt
 		b.txt d.txt f.txt h.txt
 
-SFM also allows the display of a dir-content's type; D for dir and F for file. E.g.:
-	httpd (D), log (F)
+SFM also allows the display of dir-content type. Below is an example of a dir's contents displayed,
+with the type of its contents also displayed:
 
-Notes
-	PWD would mean user's present working directory.
-	Hidden file would mean file starting with ".".
+	httpd (D), log.txt (F) // This shows that dir-content "httpd" is a dir, and dir-content
+		"log.txt" is a file.
 
 Syntax
-	sfm {Valid Unix filepath or ignore if pwd} {Chain of additional commands}
+	sfm {A valid-Unix-dir path or ignore if dir is pwd} {Chain of additional commands}
 
 Examples
 	sfm x // Horizontal display of pwd
@@ -44,31 +49,29 @@ SFM allows you to create new files and (sub-directories) subdees at:
 	- the front of another file/subdee;
 	- the back of another file/subdee
 
-	sfm nf {New file name} a // Creating file at the beginning of the dir
-	sfm nf {New file name} z // Creating file at the end of the dir
-	sfm nf {New file name} f {Old file name} // Creating file in front of another file/subdee
-	sfm nf {New file name} b {Old file name} // Creating file at the back of another file/subdee
-	sfm nf {New file name} // Creating file without bothering about position
+	sfm cf {New-file name} a // Creating file at the beginning of the dir
+	sfm cf {New-file name} z // Creating file at the end of the dir
+	sfm cf {New-file name} f {Old-file name} // Creating file in front of another file/subdee
+	sfm cf {New-file name} b {Old-file name} // Creating file at the back of another file/subdee
+	sfm cf {New-file name} // Creating file without bothering about position
 
-	sfm nd {New subdee name} a // Creating subdee at the beginning of the dir
-	sfm nd {New subdee name} z // Creating subdee at the end of the dir
-	sfm nd {New subdee name} f {Old file name} // Creating subdee in front of another
+	sfm cd {New-subdee name} a // Creating subdee at the beginning of the dir
+	sfm cd {New-subdee name} z // Creating subdee at the end of the dir
+	sfm cd {New-subdee name} f {Old file name} // Creating subdee in front of another
 		file/subdee
-	sfm nd {New subdee name} b {Old file name} // Creating subdee at the back of another
+	sfm cd {New-subdee name} b {Old file name} // Creating subdee at the back of another
 		file/subdee
-	sfm nd {New subdee name} // Creating subdee without bothering about position
+	sfm cd {New-subdee name} // Creating subdee without bothering about position
 
 Moving Files and Subdees
 
-SFM allows you to move files and subdees about. Movements can only be performed within the present
+SFM allows you to move files and subdees about. Movements can be performed only within your present
 working directory. Files and subdees can be moved to:
 
 	- the beginning of the dir;
 	- the end of the dir;
 	- the front of another file/subdee;
-	- the back of another file/subdee;
-	- n steps to the left of current position;
-	- n steps to the right of current position
+	- the back of another file/subdee
 
 	sfm mv {File name or subdee name} a // Moving to The Beginning of The Dir
 	sfm mv {File name or subdee name} z // Moving to The End of The Dir
@@ -80,26 +83,24 @@ working directory. Files and subdees can be moved to:
 Directory Segregation
 
 In traditional file managers, files and directories are often segregated. That is, the subdees are
-listed before or after listing the files in the dir.
+listed before or after listing the files in the dir. Examples of a segregated dir:
 
-	E.g.: a (file), d (file), f (file), B (dir), C (dir), Z (dir)
-	E.g.: E (dir), S (dir), W (dir), r (file), t (file), y (file)
+	a (file), d (file), f (file), B (dir), C (dir), Z (dir) // Note how the subdees are listed
+		after the files.
+	E (dir), S (dir), W (dir), r (file), t (file), y (file) // Note how the files are listed
+		after the subdees.
 
-SFM however allows files and directories to mix freely. For example, the examples above can
-respectively be the following:
+SFM however allows files and subdees to mix freely (with the help of the "mv" command). For instance,
+the examples above can respectively be reorganized into the following:
 
-	E.g.: a (file), B (dir), C (dir), d (file), f (file), Z (dir)
-	E.g.: E (dir), r (file), S (dir), t (file), W (dir), y (file)
+	a (file), B (dir), C (dir), d (file), f (file), Z (dir)
+	E (dir), r (file), S (dir), t (file), W (dir), y (file)
 
 Assuming the files and subdees in your dir are mixed, the following command can be used to
-segregate them:
+resegregate them:
 
-	sfm sg da // Directories would be listed after files.
-	sfm sg db // Directories would be listed before files.
-
-Desegregating a Segregated Dir
-
-	sfm ds
+	sfm sg da // Subdees would be listed after the files.
+	sfm sg db // Subdees would be listed before files.
 
 Moving Files and Subdees (Revisited)
 
@@ -109,10 +110,22 @@ of the dir. The same goes for subdees.
 
 Getting An SDS Dir's Basic Info
 
-How can you know if an SDS directory is segregated? How can you know what ordering an SDS dir in
-under? How can you learn some basic info about an SDS dir? Well, by issuing the command:
+How can you know if an SDS directory is segregated? How can you learn some basic info about an SDS
+dir? Well, by issuing the command:
 
-	sfm di
+	sfm {A valid-Unix-dir path or ignore if dir is pwd} di
+
+Examples
+	sfm di // Basic SDS info of pwd
+	sfm /etc di // Basic SDS info of "/etc"
+
+Desegregating a Segregated Dir
+
+	sfm {A valid-Unix-dir path or ignore if dir is pwd} ds
+
+Examples
+	sfm ds // Desegregation of pwd
+	sfm /etc ds // Desegregration of "/etc"
 
 SFM Help
 
