@@ -42,41 +42,28 @@ Examples
 
 Creating New Files and Subdees
 
-SFM allows you to create new files and (sub-directories) subdees at:
+SFM allows you to create new files and (sub-directories) subdees:
 
-	- the beginning of the dir;
-	- the end of the dir;
-	- the front of another file/subdee;
-	- the back of another file/subdee
+	- at the beginning of your dir;
+	- behind another file/subdee
 
 	sfm cf {New-file name} a // Creating file at the beginning of the dir
-	sfm cf {New-file name} z // Creating file at the end of the dir
-	sfm cf {New-file name} f {Old-file name} // Creating file in front of another file/subdee
-	sfm cf {New-file name} b {Old-file name} // Creating file at the back of another file/subdee
+	sfm cf {New-file name} b {Old-file name} // Creating file behind another file/subdee
 	sfm cf {New-file name} // Creating file without bothering about position
 
 	sfm cd {New-subdee name} a // Creating subdee at the beginning of the dir
-	sfm cd {New-subdee name} z // Creating subdee at the end of the dir
-	sfm cd {New-subdee name} f {Old file name} // Creating subdee in front of another
-		file/subdee
-	sfm cd {New-subdee name} b {Old file name} // Creating subdee at the back of another
-		file/subdee
+	sfm cd {New-subdee name} b {Old file name} // Creating subdee behind another file/subdee
 	sfm cd {New-subdee name} // Creating subdee without bothering about position
 
 Moving Files and Subdees
 
 SFM allows you to move files and subdees about. Movements can be performed only within your present
-working directory. Files and subdees can be moved to:
-
-	- the beginning of the dir;
-	- the end of the dir;
-	- the front of another file/subdee;
-	- the back of another file/subdee
+working directory. Files and subdees can be moved:
+222
+	- to the beginning of your dir;
+	- behind another file/subdee
 
 	sfm mv {File name or subdee name} a // Moving to The Beginning of The Dir
-	sfm mv {File name or subdee name} z // Moving to The End of The Dir
-	sfm mv {File name or subdee name} f {Other file} // Moving to The Front of Another
-		File/Subdee
 	sfm mv {File name or subdee name} b {Other file} // Moving to The Back of Another
 		File/Subdee
 

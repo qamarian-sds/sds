@@ -14,8 +14,8 @@ two ways:
 	v.txt, README.txt, d.txt, intro.txt, a.txt
 	[descending order]
 
-However, if you want something more organized, a solution like SDS is what you turn to. With SDS, the
-project directory can be organized into something like this:
+However, if you want something more organized, a solution like SDS is what you turn to. With SDS,
+the project directory can be organized into something like this:
 
 	README.txt, intro.txt, a.txt, d.txt, v.txt
 	[This is clearly a more intuitive organization of the directory.]
