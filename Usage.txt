@@ -1,5 +1,0 @@
-Usage
-
-All it takes to use SDS, is a tool that supports it. For GUI users, you can get a file manager that
-supports it. For CLI users, you can get the "sfm" tool. The "sfm" tool is available for 32 and
-64-bit Windows, 32 and 64-bit Linux, and the Mac.
