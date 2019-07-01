@@ -70,5 +70,7 @@ You can see how the contents are listed based on the position of their character
 (https://en.wikipedia.org/wiki/List_of_Unicode_characters). Also note how no distinction was made
 between lower-case and upper-case alphabets.
 
-> In short, the contents of an SDS directory which has not been organized at all, would be listed based on
-the position of their characters (characters of their name), in the Unicode table.
+#### Summary
+
+_In short, the contents of an SDS directory which has not been organized at all, would be listed based on
+the position of their characters (characters of their name), in the Unicode table._
