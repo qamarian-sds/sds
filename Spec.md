@@ -72,5 +72,5 @@ between lower-case and upper-case alphabets.
 
 #### Summary
 
-_In short, the contents of an SDS directory which has not been organized at all, would be listed based on
+_In short, the contents of an SDS directory which has not been organized at all, shall be listed based on
 the position of their characters (characters of their name), in the Unicode table._
