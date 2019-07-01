@@ -1,10 +1,10 @@
 # The SDS Specification
 
-**
-Note
+**Note:**
+
 1. An SDS directory is a directory that uses SDS for organization.
 2. "Dir" would mean directory.
-**
+
 
 Every SDS directory shall have a file called ".sds" (case-insensitive). This file would contain
 information on how the directory is organized. This file shall be placed in the directory itself. As
