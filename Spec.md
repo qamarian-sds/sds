@@ -37,7 +37,13 @@ point.
 Assuming we have a directory containing the following files:
 
 ```
-01-07-2019.txt 01-07-19.txt 01.txt -x.txt .profile MakeFile _TempLog
+01-07-2019.txt
+01-07-19.txt
+01.txt
+-x.txt
+.profile
+MakeFile
+_TempLog
 ```
 
 If an SDS directory is yet to be organized, an SDS-supported file manager 
