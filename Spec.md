@@ -31,8 +31,8 @@ Concept_.
 
 ## Unicode
 
-Ordinarily, the contents of an SDS directory (SDSD), shall be sorted based on their Unicode Code
-Point.
+By default, the contents of an SDS directory (SDSD) shall be based on the position of their
+characters in the [Unicode table](https://en.wikipedia.org/wiki/List_of_Unicode_characters).
 
 Assuming we have an SDS directory containing the following files:
 
