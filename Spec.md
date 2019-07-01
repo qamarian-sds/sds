@@ -1,6 +1,6 @@
 # The SDS Specification
 
-**Note:**
+__Note:__
 
 1. An SDS directory is a directory that uses SDS for organization.
 2. "Dir" would mean directory.
