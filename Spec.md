@@ -26,7 +26,8 @@ OrgRules:[
 ]
 ```
 
-SDS organizes dirs based on three things: Unicode, The Lead Content Concept, and The After Concept.
+SDS organizes dirs based on three things: _Unicode_, _The Lead Content Concept_, and _The After
+Concept_.
 
 ## Unicode
 
