@@ -31,10 +31,10 @@ Concept_.
 
 ## Unicode
 
-Ordinarily, the contents of an SDS directory (SDSD), shall be sorted based on their Unicode code
-point.
+Ordinarily, the contents of an SDS directory (SDSD), shall be sorted based on their Unicode Code
+Point.
 
-Assuming we have a directory containing the following files:
+Assuming we have an SDS directory containing the following files:
 
 ```
 01-07-2019.txt
@@ -44,6 +44,31 @@ Assuming we have a directory containing the following files:
 .profile
 MakeFile
 _TempLog
+about.md
+1.txt
+.prof
+
 ```
 
-If an SDS directory is yet to be organized, an SDS-supported file manager 
+If the directory is yet to undergo any organization, an SDS-supported file manager shall list it the
+following way:
+
+,,,
+.prof
+.profile
+-x.txt
+01-07-19.txt
+01-07-2019.txt
+01.txt
+1.txt
+_TempLog
+about.md
+MakeFile
+```
+
+You can see how the contents are listed based on the position of their characters, in the [Unicode table]
+(https://en.wikipedia.org/wiki/List_of_Unicode_characters). Also note how no distinction was made
+between lower-case and upper-case alphabets.
+
+> > In short, the contents of an SDS directory which has not been organized at all, would be listed based on
+the position of their characters (characters of their name), in the Unicode table.
