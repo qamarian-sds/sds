@@ -4,7 +4,7 @@ Before reading the SDS specification, it is very important we discuss how SDS ac
 
 __Terms to Note:__
 
-1. An SDS directory is a directory that uses SDS for organizing its files and sub-directories.
+1. An SDS directory is a directory that uses SDS to organize its files and sub-directories.
 2. "Dir" would mean directory.
 
 

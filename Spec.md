@@ -2,8 +2,8 @@
 
 ### The .SDS File
 
-As of v0.1.0-1 (version 0.1.0 model 1), a _.sds_ file can only be UTF-8 formatted, and can only use
-the Unix type of newline character `\n`.
+As of _v0.1.0-1_ (version 0.1.0 model 1), a _.sds_ file can only be _UTF-8_ formatted, and can only
+use the _Unix type_ of newline character `\n`.
 
 There are three data that can be present in a _.sds_ file:
 
@@ -29,7 +29,7 @@ the first data to appear in a _.sds_ file._
 
 The version data is a data that must be present in a valid _.sds_ file. The value of this data shall
 be the version and model no of SDS used to organize the dir. As stated above, it is recommended that
-this day should always be the first data in a _.sds_ file. Example:
+this data should always be the first data in a _.sds_ file. Example:
 
 ~~~~
 Version:0.1.0-1
@@ -51,19 +51,20 @@ left out of the _.sds_ file or recorded like this:
 Lead:
 ~~~~
 
-_Blank spaces may appear after the colon `:`._
+_Spaces (this is what is meant by space _" "_, not _"\n"_ and the likes) may appear after the colon
+`:`._
 
 #### Orgrules
 
 An orgrule (Organization Rule) is an infomation specifically describing where a dir-content should
 be placed, in the dir listing. An SDS directory may have an infinite number of orgrules. If an SDS
-dir has no orgrule, this data may be left our of the _.sds_ file, or recorded like this:
+dir has no orgrule, this data may be left out of the _.sds_ file, or recorded like this:
 
 ~~~~
 Orgrules:
 ~~~~
 
-_Spaces (this is what is meant by space " ", not "\n" and the likes) may appear after the colon
+_Spaces (this is what is meant by space _" "_, not _"\n"_ and the likes) may appear after the colon
 `:`._
 
 or like this:
@@ -71,8 +72,9 @@ or like this:
 ~~~~
 Orgrules:[
 ]
+~~~~
 
-_Spaces (this is what is meant by space " ", not "\n" and the likes) may appear after `[`._
+_Spaces (this is what is meant by space _" "_, not _"\n"_ and the likes) may appear after `[`._
 
 Orgrules of an SDS dir should be placed in between `[` and `]`. Each orgrule must be on a new line.
 
@@ -85,14 +87,14 @@ someFile.xt/anotherFile.xt
 ]
 ~~~~
 
-_Spaces (this is what is meant by space " ", not "\n" and the likes) may appear before and after
+_Spaces (this is what is meant by space _" "_, not _"\n"_ and the likes) may appear before and after
 an orgrule. However, the standard is that two spaces should come before an orgrule, and no spcae
 should come after._
 
 ###### Orgrule Illegal Chars
 
-Owing to the fact that the `\` character and the `"\n"` character are used for orgrules syntax, a
-file or sub-dir is not allowed to have them in its name.
+Owing to the fact that the `\` character and the `\n` character are used for orgrules syntax, a file
+or sub-dir is not allowed to have them in its name.
 
 __Examples of invalid orgrules (due to presence of `\` in file or sub-dir name):__
 
