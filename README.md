@@ -36,8 +36,8 @@ standard for organizing directories.
 Read the other files/pages in the following order:
 
 * [How to use SDS](https://github.com/qamarian-sds/sds/blob/master/Usage.md)
-* [Adding SDS Support to File Managers (For developers)]
-(https://github.com/qamarian-sds/sds/blob/master/SDSForDev.md)
+* [Adding SDS Support to File Managers
+(For developers)](https://github.com/qamarian-sds/sds/blob/master/SDSForDev.md)
 * [How SDS Works](https://github.com/qamarian-sds/sds/blob/master/Working.md)
 * [The SDS Specification](https://github.com/qamarian-sds/sds/blob/master/Spec.md)
 * [FAQ](https://github.com/qamarian-sds/sds/blob/master/FAQ.md)
