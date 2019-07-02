@@ -79,8 +79,8 @@ file.
 
 Ordinarily, contents of an SDS directory would be listed based on what we discussed under the
 __Unicode-based Listing section__; however, if we want a dir-content to be placed at a location
-which is not its default location, some information would have to be recorded in the __".sds"__,
-to make this possible.
+which is not its default location, some information would have to be recorded in the __".sds"__
+file, to make this possible.
 
 #### Example
 
@@ -124,12 +124,12 @@ Orgrules:[
 ~~~~
 
 With the help of this simple concept (in addition to the Unicode-based listing discussed above), we
-can organize an SDS directory anyway.
+can organize an SDS directory in any way.
 
 ## The Lead File Concept
 
-Although, Unicode-based Listing and The After Concept are enough for us to organize an SDS dir in
-any way, they however are not enough to facilitate computational efficiency in some cases.
+Although, _Unicode-based Listing_ and _The After Concept_ are enough for us to organize an SDS dir
+in any way, they however are not enough to facilitate computational efficiency in some cases.
 
 Imagine we have a dir containing the following:
 
@@ -184,8 +184,8 @@ _TempLog
 about.md
 ~~~~
 
-Note, if we only added the organization rule (orgrule) `MakeFile/.prof`, this is how our dir would
-have been listed:
+Note, if we only added orgrule (organization rule) `MakeFile/.prof`, this is how our dir would have
+been listed:
 
 ~~~~
 .profile
@@ -201,13 +201,15 @@ MakeFile
 .prof
 ~~~~
 
-Looking at the approach we took, to making file _MakeFile_ the first content of our dir, you can see
-how inefficent it would be if we are dealing with thousands of files and sub-dirs (i.e. we would
-have to record so many orgrules). To surpress this potential inefficiency, we introduced the _Lead
-File_ concept.
+#### A Better Approach
 
-With the Lead File concept, rather than recording so many orgrules, we can just make file _MakeFile_
-our lead file. This means our _.sds_ would instead be manipulated into this:
+Looking at the approach we took above, to making file _MakeFile_ the first content of our dir, you
+can see how inefficent it would be if we are dealing with thousands of dir-contents (i.e. we would
+have to record so many orgrules). To surpress this potential inefficiency, we introduced the _Lead
+ File_ concept.
+
+With the Lead File concept, rather than recording so many orgrules, we can just make file
+_MakeFile_ our lead file. This means our _.sds_ would instead be manipulated into this:
 
 ~~~~
 Version:0.1.0
@@ -216,6 +218,28 @@ Lead:MakeFile
 Orgrules:[
 ]
 ~~~~
+
+Rather than this:
+
+~~~~
+Version:0.1.0
+Segregation:
+Lead:
+OrgRules:[
+  MakeFile/.prof
+  .prof/.profile
+  .profile/.sds
+  .sds/-x.txt
+  -x.txt/01-07-19.txt
+  01-07-19.txt/01-07-2019.txt
+  01-07-2019.txt/01.txt
+  01.txt/1.txt
+  1.txt/_TempLog
+  _TempLog/about.md
+]
+~~~~
+
+#### Capitalizing on The Lead
 
 Now let's assume we want to go a step further, and make file _1.txt_ come after _MakeFile_, we can
 further manipulate our _.sds_ file into this:
@@ -245,4 +269,5 @@ _TempLog
 about.md
 ~~~~
 
-__Note that not only a file can be made the lead of a dir, a sub-dir can also be made the lead.__
+__Note that not only a file can be made the lead of a dir, a sub-dir can also be made the lead of a
+dir.__
