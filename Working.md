@@ -10,7 +10,7 @@ __Terms to Note:__
 
 Every SDS directory shall have a file called ".sds" (case-insensitive). This file would contain
 information on how the directory is organized. This file shall be placed in the directory itself. As
-of version 0.1.0, a typical ".sds" file looks like this:
+of version 0.1.0 model 1 (v0.1.0-1), a typical ".sds" file looks like this:
 
 ```
 || This is a single-line comment.
@@ -18,7 +18,7 @@ of version 0.1.0, a typical ".sds" file looks like this:
 This is a multi-line comment.
 *|
 
-Version:0.1.0
+Version:0.1.0-1
 Lead:m.txt
 Orgrules:[
   a.txt/b.txt
@@ -105,7 +105,7 @@ tell SFMs (SDS File Managers) to implement such a behaviour. That is, our _.sds_
 formerly like this:
 
 ~~~~
-Version:0.1.0
+Version:0.1.0-1
 Lead:
 Orgrules:[
 ]
@@ -114,7 +114,7 @@ Orgrules:[
 would now look like this:
 
 ~~~~
-Version:0.1.0
+Version:0.1.0-1
 Lead:
 Orgrules:[
   .profile/.prof
@@ -149,7 +149,7 @@ To make file _MakeFile_ the first content to be listed, we can manipulate our _.
 something like this:
 
 ~~~~
-Version:0.1.0
+Version:0.1.0-1
 Lead:
 OrgRules:[
   MakeFile/.prof
@@ -192,7 +192,7 @@ With the _Lead Content_ concept, rather than recording so many orgrules, we can 
 _MakeFile_ our lead content. This means our _.sds_ would instead be manipulated into this:
 
 ~~~~
-Version:0.1.0
+Version:0.1.0-1
 Lead:MakeFile
 Orgrules:[
 ]
@@ -201,7 +201,7 @@ Orgrules:[
 Rather than this:
 
 ~~~~
-Version:0.1.0
+Version:0.1.0-1
 Lead:
 OrgRules:[
   MakeFile/.prof
@@ -223,7 +223,7 @@ Now let's assume we want to go a step further, and make file _1.txt_ come after 
 further manipulate our _.sds_ file into this:
 
 ~~~~
-Version:0.1.0
+Version:0.1.0-1
 Lead:MakeFile
 Orgrules:[
   MakeFile/1.txt
