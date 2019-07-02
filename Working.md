@@ -1,6 +1,8 @@
-# The SDS Specification
+# How SDS Actually Works
 
-__Note:__
+Before reading the SDS specification, it is very important we discuss how SDS actually works.
+
+__Terms to Note:__
 
 1. An SDS directory is a directory that uses SDS for organizing its files and sub-directories.
 2. "Dir" would mean directory.
@@ -16,9 +18,7 @@ of version 0.1.0, a typical ".sds" file looks like this:
 This is a multi-line comment.
 *|
 
-
 Version:0.1.0
-Segregation:da
 Lead:m.txt
 Orgrules:[
   a.txt/b.txt
@@ -51,8 +51,8 @@ about.md
 
 ```
 
-If the directory is yet to undergo any organization, an SDS-supported file manager shall list it the
-following way:
+If the directory is yet to undergo any organization, an SDS-supported file manager shall list its
+contents the following way:
 
 ```
 .prof
@@ -79,7 +79,7 @@ file.
 
 Ordinarily, contents of an SDS directory would be listed based on what we discussed under the
 __Unicode-based Listing section__; however, if we want a dir-content to be placed at a location
-which is not its default location, some information would have to be recorded in the __".sds"__
+which is not its default location, some information would have to be recorded in the __.sds__
 file, to make this possible.
 
 #### Example
@@ -106,17 +106,15 @@ formerly like this:
 
 ~~~~
 Version:0.1.0
-Segregation:
 Lead:
 Orgrules:[
 ]
 ~~~~
 
-would now look like this
+would now look like this:
 
 ~~~~
 Version:0.1.0
-Segregation:
 Lead:
 Orgrules:[
   .profile/.prof
@@ -152,7 +150,6 @@ something like this:
 
 ~~~~
 Version:0.1.0
-Segregation:
 Lead:
 OrgRules:[
   MakeFile/.prof
@@ -184,36 +181,18 @@ _TempLog
 about.md
 ~~~~
 
-Note, if we only added orgrule (organization rule) `MakeFile/.prof`, this is how our dir would have
-been listed:
-
-~~~~
-.profile
-.sds
--x.txt
-01-07-19.txt
-01-07-2019.txt
-01.txt
-1.txt
-_TempLog
-about.md
-MakeFile
-.prof
-~~~~
-
 #### A Better Approach
 
 Looking at the approach we took above, to making file _MakeFile_ the first content of our dir, you
 can see how inefficent it would be if we are dealing with thousands of dir-contents (i.e. we would
 have to record so many orgrules). To surpress this potential inefficiency, we introduced the _Lead
- File_ concept.
+ Content_ concept.
 
-With the Lead File concept, rather than recording so many orgrules, we can just make file
-_MakeFile_ our lead file. This means our _.sds_ would instead be manipulated into this:
+With the _Lead Content_ concept, rather than recording so many orgrules, we can just make file
+_MakeFile_ our lead content. This means our _.sds_ would instead be manipulated into this:
 
 ~~~~
 Version:0.1.0
-Segregation:
 Lead:MakeFile
 Orgrules:[
 ]
@@ -223,7 +202,6 @@ Rather than this:
 
 ~~~~
 Version:0.1.0
-Segregation:
 Lead:
 OrgRules:[
   MakeFile/.prof
@@ -246,7 +224,6 @@ further manipulate our _.sds_ file into this:
 
 ~~~~
 Version:0.1.0
-Segregation:
 Lead:MakeFile
 Orgrules:[
   MakeFile/1.txt
