@@ -32,3 +32,11 @@ README.txt, intro.txt, a.txt, d.txt, v.txt
 SDS allows you to organize your directories in anyway. And it is platform independent, meaning  your
 directory can maintain its organization, as you copy it from one computer to another. SDS is an open
 standard for organizing directories.
+
+Read the other files/pages in the following order:
+
+[How to use SDS](https://github.com/qamarian-sds/sds/blob/master/Usage.md)
+[SDS For Developers (For developers)](https://github.com/qamarian-sds/sds/blob/master/SDSForDev.md)
+[How SDS Works](https://github.com/qamarian-sds/sds/blob/master/Working.md)
+[The SDS Specification](https://github.com/qamarian-sds/sds/blob/master/Spec.md)
+[FAQ](https://github.com/qamarian-sds/sds/blob/master/FAQ.md)
