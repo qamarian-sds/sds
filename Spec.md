@@ -128,10 +128,10 @@ can organize an SDS directory in any way.
 
 ## The Lead File Concept
 
-Although, _Unicode-based Listing_ and _The After Concept_ are enough for us to organize an SDS dir
-in any way, they however are not enough to facilitate computational efficiency in some cases.
+Although, the _Unicode-based Listing_ and _The After Concept_ are enough for us to organize an SDS
+dir in any way, they however are not enough to facilitate computational efficiency in some cases.
 
-Imagine we have a dir containing the following:
+Imagine we having a dir containing the following:
 
 ~~~~
 .prof
@@ -147,8 +147,8 @@ about.md
 MakeFile
 ~~~~
 
-To make file _MakeFile_ the first content to be listed, we can manipulate our _.sds_ into something
-like this:
+To make file _MakeFile_ the first content to be listed, we can manipulate our _.sds_ file into
+something like this:
 
 ~~~~
 Version:0.1.0
@@ -257,14 +257,14 @@ In other words, our dir would now be displayed like this:
 
 ~~~~
 MakeFile
-.sds
+1.txt
 .prof
 .profile
+.sds
 -x.txt
 01-07-19.txt
 01-07-2019.txt
 01.txt
-1.txt
 _TempLog
 about.md
 ~~~~
