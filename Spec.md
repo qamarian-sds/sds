@@ -93,10 +93,10 @@ should come after._
 
 ###### Orgrule Illegal Chars
 
-Owing to the fact that the `\` character and the `\n` character are used for orgrules syntax, a file
+Owing to the fact that the `/` character and the `\n` character are used for orgrules syntax, a file
 or sub-dir is not allowed to have them in its name.
 
-__Examples of invalid orgrules (due to presence of `\` in file or sub-dir name):__
+__Examples of invalid orgrules (due to presence of `/` in file name or sub-dir name):__
 
 ~~~~
 someFile.ext/some/Dir
