@@ -108,5 +108,5 @@ some/Dir/someFile.ext
 The SDS standard however does not place limit on how long the name of a file or sub-directory can
 be.
 
-* [Prev](https://github.com/qamarian-sds/sds/blob/master/Working.md)
+* [Back](https://github.com/qamarian-sds/sds/blob/master/Working.md)
 * [Home](https://github.com/qamarian-sds/sds)
