@@ -2,11 +2,12 @@
 
 Before reading the SDS specification, it is very important we discuss how SDS actually works.
 
-__Terms to Note:__
+~~~~
+Terms to Note:
 
-1. An SDS directory is a directory that uses SDS to organize its files and sub-directories.
-2. "Dir" would mean directory.
-
+"SDS directory" would mean a directory that uses SDS to organize its contents.
+"Dir" would mean directory.
+~~~~
 
 Every SDS directory shall have a file called ".sds" (case-insensitive). This file would contain
 information on how the directory is organized. This file shall be placed in the directory itself. As
