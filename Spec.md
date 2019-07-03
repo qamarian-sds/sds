@@ -110,3 +110,8 @@ be.
 
 * [Back](https://github.com/qamarian-sds/sds/blob/master/Working.md)
 * [Home](https://github.com/qamarian-sds/sds)
+
+#### Comments
+
+The SDS specification allows comment to be placed in SDS files. `||` can be used for single-line
+comment, while `|* ... *|`
