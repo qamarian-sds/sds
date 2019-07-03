@@ -79,10 +79,10 @@ made between lower-case and upper-case alphabets.
 SDS implements directory organization, by saving info about what file should come after another
 file.
 
-Ordinarily, contents of an SDS directory would be listed based on what we discussed under the
-_Unicode-based Listing_ section; however, if we want a dir-content to be placed at a location
-which is not its default location, some information would have to be recorded in the __.sds__
-file, to make this possible.
+Ordinarily, contents of an SDS directory would be listed based on what we discussed under
+_Unicode-based Listing_. However, if we want a dir-content to be placed at a location which is not
+its default location, some information would have to be recorded in the __.sds__ file, to make this
+possible.
 
 #### Example
 
