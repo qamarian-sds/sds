@@ -248,7 +248,8 @@ _TempLog
 about.md
 ~~~~
 
-__NOTE: Both a file and a sub-dir can be made the lead of a dir.__
+__NOTE: Lead content is not restricted to files alone, a sub-dir can also be the lead of its parent
+dir.__
 
 * [Back](https://github.com/qamarian-sds/sds/blob/master/SDSForDev.md)
 * [Next](https://github.com/qamarian-sds/sds/blob/master/Spec.md)
