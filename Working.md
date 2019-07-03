@@ -80,7 +80,7 @@ SDS implements directory organization, by saving info about what file should com
 file.
 
 Ordinarily, contents of an SDS directory would be listed based on what we discussed under the
-__Unicode-based Listing section__; however, if we want a dir-content to be placed at a location
+_Unicode-based Listing_ section; however, if we want a dir-content to be placed at a location
 which is not its default location, some information would have to be recorded in the __.sds__
 file, to make this possible.
 
