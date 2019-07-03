@@ -81,7 +81,7 @@ file.
 
 Ordinarily, contents of an SDS directory would be listed based on what we discussed under
 _Unicode-based Listing_. However, if we want a dir-content to be placed at a location which is not
-its default location, some information would have to be recorded in the __.sds__ file, to make this
+its default location, some information would have to be recorded in the _.sds_ file, to make this
 possible.
 
 #### Example
@@ -123,8 +123,8 @@ Orgrules:[
 ]
 ~~~~
 
-With the help of this simple concept (in addition to the Unicode-based listing discussed above), we
-can organize an SDS directory in any way.
+With the help of this simple concept and  _Unicode-based Listing_, we can organize an SDS directory
+in any way.
 
 ## The Lead File Concept
 
