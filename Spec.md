@@ -36,7 +36,9 @@ Version:0.1.0-1
 ~~~~
 
 If a _.sds_ file does not have this data, or the value of this data is not set, or the value of this
-data is invalid, the SDS specification does not specify what should happen.
+data is invalid, the SDS specification does not specify what should happen. By invalid, we mean a
+version number that does not take the following format: "x.y.z-m", where x, y, z, and m can be
+integers.
 
 #### The Lead Content Data
 
@@ -108,9 +110,6 @@ some/Dir/someFile.ext
 The SDS standard however does not place limit on how long the name of a file or sub-directory can
 be.
 
-* [Back](https://github.com/qamarian-sds/sds/blob/master/Working.md)
-* [Home](https://github.com/qamarian-sds/sds)
-
 #### Comments
 
 The SDS specification allows comments to be placed in _.sds_ files. `||` can be used for single-line
@@ -134,3 +133,6 @@ same line. Also, a comment shall not appear on the same line as any .sds file da
 
 Version:0.1.0-1 || Comment C
 ~~~~
+
+* [Back](https://github.com/qamarian-sds/sds/blob/master/Working.md)
+* [Home](https://github.com/qamarian-sds/sds)
