@@ -113,5 +113,24 @@ be.
 
 #### Comments
 
-The SDS specification allows comment to be placed in SDS files. `||` can be used for single-line
-comment, while `|* ... *|`
+The SDS specification allows comments to be placed in _.sds_ files. `||` can be used for single-line
+comment, while `|* ... *|` can be used for multi-line comment.
+
+~~~~
+|| This is a single line comment.
+
+|* This is a
+multi-line
+comment. *|
+~~~~
+
+_Note that a comment shall always start on a new line. Two different comments shall not appear on the
+same line. Also, a comment shall not appear on the same line as any .sds file data._
+
+###### Examples of Invalid Comments
+
+~~~~
+|* Comment A *| || Comment B
+
+Version:0.1.0-1 || Comment C
+~~~~
