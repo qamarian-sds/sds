@@ -126,7 +126,7 @@ Orgrules:[
 With the help of this simple concept and  _Unicode-based Listing_, we can organize an SDS directory
 in any way.
 
-## The Lead File Concept
+## The Lead Content Concept
 
 Although, the _Unicode-based Listing_ and _The After Concept_ are enough for us to organize an SDS
 dir in any way, they however are not enough to facilitate computational efficiency in some cases.
