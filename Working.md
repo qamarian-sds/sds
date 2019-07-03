@@ -10,8 +10,9 @@ Terms to Note:
 ~~~~
 
 Every SDS directory shall have a file called ".sds" (case-insensitive). This file would contain
-information on how the directory is organized. This file shall be placed in the directory itself. As
-of _version 0.1.0 model 1 (v0.1.0-1)_, a typical ".sds" file looks like this:
+information on how the directory is organized. This file shall be placed in the directory itself.
+
+As of _version 0.1.0 model 1 (v0.1.0-1)_, a typical ".sds" file looks like this:
 
 ```
 || This is a single-line comment.
