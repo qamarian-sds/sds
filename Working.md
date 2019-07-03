@@ -69,7 +69,7 @@ MakeFile
 ```
 
 You can see how the contents are listed based on the position of their characters, in the [Unicode
-table] (https://en.wikipedia.org/wiki/List_of_Unicode_characters). Also note how no distinction was
+table](https://en.wikipedia.org/wiki/List_of_Unicode_characters). Also note how no distinction was
 made between lower-case and upper-case alphabets.
 
 ## The After Concept
