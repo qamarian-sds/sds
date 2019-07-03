@@ -248,7 +248,7 @@ _TempLog
 about.md
 ~~~~
 
-__NOTE: Lead content is not restricted to files alone, a sub-dir can also be the lead of its parent
+__NOTE: Lead content is not restricted to files alone, a sub-dir can also be the lead of an SDS
 dir.__
 
 * [Back](https://github.com/qamarian-sds/sds/blob/master/SDSForDev.md)
