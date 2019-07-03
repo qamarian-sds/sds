@@ -78,7 +78,8 @@ Orgrules:[
 
 _Spaces (this is what is meant by space _" "_, not _"\n"_ and the likes) may appear after `[`._
 
-Orgrules of an SDS dir should be placed in between `[` and `]`. Each orgrule must be on a new line.
+Orgrules of an SDS dir should be placed in between characters `[` and `]`. Each orgrule must be on a
+new line.
 
 ###### Example
 
