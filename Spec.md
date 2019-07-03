@@ -37,7 +37,7 @@ Version:0.1.0-1
 
 If a _.sds_ file does not have this data, or the value of this data is not set, or the value of this
 data is invalid, the SDS specification does not specify what should happen. By invalid, we mean a
-version number that does not take the following format: "x.y.z-m", where x, y, z, and m can be
+version value that does not take the following format: _x.y.z-m_, where _x_, _y_, _z_, and _m_ are
 integers.
 
 #### The Lead Content Data
